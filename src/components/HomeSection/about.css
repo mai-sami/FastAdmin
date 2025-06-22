@@ -1,0 +1,111 @@
+@font-face {
+    font-family: regularFont;
+    src: url(../../assets/fonts/FSAlbertArabic-Regular.ttf);
+}
+
+.about-us {
+    font-family: regularFont;
+}
+
+.title {
+    color: #f3a229;
+}
+
+#image__sections {
+    width: 70%;
+    border-radius: 10%;
+}
+
+.title_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-title-about {
+    margin-top: 1rem;
+    line-height: 3;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: regularFont;
+}
+
+#subscribe {
+    background-color: #f3d429 !important;
+    color: white;
+    border: none;
+    width: 32%;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 22px;
+}
+
+.joine {
+    padding: .5rem;
+}
+
+/* style other sections */
+.wating {
+    color: #FF987A;
+    font-size: 26px !important;
+}
+
+.sontactUsBox {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content_Box {
+    display: flex;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+    padding: 2rem;
+    text-wrap: wrap;
+    background-color: #ffff;
+    box-shadow: 0 3px 10px rgba(227, 132, 23, 0.2);
+}
+
+.disBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactSection {
+    margin: 9rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__sections {
+    width: 600px;
+    padding-left: 5rem;
+    border-radius: 10%;
+}
+
+.about__sectionsDark {
+    width: 600px;
+    padding-right: 5rem;
+    border-radius: 10%;
+}
+
+.read_more {
+    color: #f3a229;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 790px) {
+    .about__sections {
+        display: none
+    }
+}
+
+;

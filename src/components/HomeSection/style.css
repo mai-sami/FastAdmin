@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'regularFont';
+    src: url(../../assets/fonts/FSAlbertArabic-Regular.ttf);
+}
+
+.introductions {
+    margin: 9rem 0;
+}
+
+.introduction {
+    padding: 9rem 0 6rem 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.introduction .intro {
+    margin-top: 1rem;
+}
+
+.introduction .title {
+    color: #903809e7;
+    font-size: 60px;
+    line-height: 2;
+    font-weight: bolder;
+}
+
+.com {
+    font-size: 123px;
+    font-weight: bolder;
+    display: flex;
+    align-items: end;
+    color: #f9b823e7;
+    top: 3rem;
+    left: 0;
+    justify-content: end;
+    position: absolute;
+}
+
+.introduction .sub-title {
+    font-size: 16px;
+    font-family: regularFont;
+    line-height: 2.8;
+    /* color: #8B8A8A; */
+}
+
+.btn {
+    border-radius: 35px;
+    border: none;
+    padding: 10px;
+    margin-top: .5rem;
+    width: 9rem;
+}
+
+.introduction {
+    margin-left: 1.5rem;
+}
+
+.introduction .download-app {
+    background-color: #e49603;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+
+}
+
+.join-now {
+    background-color: #f36135;
+
+
+}
+
+#image__section {
+    margin-right: 7rem;
+    border-radius: 10%;
+}
+
+.text__cinter {
+    text-align: center;
+
+}
+
+.slid {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: contents;
+    flex-direction: column;
+}
+
+.title__cinter {
+    padding: .2em;
+    color: #f2b201;
+    font-weight: bolder;
+    font-size: 24px;
+
+}
+
+.text__cinterP {
+    font-family: 'regularFont';
+    font-size: 28px;
+    text-wrap: wrap;
+
+
+}
+
+.p__P {
+    font-size: 13px;
+    line-height: .1;
+    font-family: 'regularFont';
+
+}
+
+
+/* other styles */
+.others {
+    margin: 6rem 0;
+}
+
+#image__other {
+    border-radius: 13%;
+    width: 100%;
+    padding: 3rem;
+}
+
+/* slider styles */
+.slick-prev:before,
+.slick-next:before {
+    color: rgb(255, 106, 0) !important;
+    font-size: 25px;
+    display: inline !important;
+
+}
+
+.relateBox {
+
+    border-radius: 12px;
+    background: #fff;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem !important;
+    padding: .5rem;
+    box-shadow: 0 3px 10px rgba(227, 132, 23, 0.2);
+    width: 350px !important;
+    height: 180px;
+    position: relative;
+}
+
+.image_slider {
+    border-radius: 50%;
+    position: absolute;
+    width: 120px;
+    z-index: 9999;
+    bottom: 50%;
+    border: 2px solid #90730051;
+    height: 120px;
+}
+
+.reate_evel {
+    margin-top: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.slick-list {
+    padding-top: 3rem;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #f23939 !important;
+}
+
+.slick-initialized .slick-slide {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex !important;
+}
+
+@media (max-width: 500px) {
+    #image__section {
+        display: none;
+    }
+
+    .relateBox {
+        width: 280px !important;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 880px) {
+    #image__section {
+        margin: 0;
+    }
+
+    .relateBox {
+        width: 250px !important;
+
+    }
+
+    #image__section {
+        display: none;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .intro {
+        width: 100%;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 950px) {
+    .title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 670px) {
+
+    .relateBox {
+        width: 320px !important;
+    }
+}
+
+
+/* style login page */
+.input_filed {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.input_email {
+    padding: 1rem;
+    width: 100%;
+    outline: navajowhite;
+    margin: 1rem 0;
+    cursor: pointer;
+     border-radius: 5px;
+    border: 1px solid #f2b20177;
+
+}
+.LoginBtun{
+    width: 100% !important;
+    padding: .8rem !important;
+    font-size: 20px;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+}

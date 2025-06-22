@@ -1,0 +1,40 @@
+{
+  "en": {
+    "translation": {
+      "about": "About Us",
+      "Servises": "Services",
+      "Home": "Home",
+      "Contact Us": "Contact Us",
+      "Customers": "Customers",
+      "Login": "Login",
+      "Platform": "Platform",
+      "Miner": "Fast Miner",
+      "textInto": "A cloud-based mining platform that allows users to invest in actual mining capacity managed through advanced data centers. This allows users to deposit and leverage the energy from both sides to provide competitive returns to users while maintaining project sustainability and providing high-quality services.",
+      "Join": "Join now",
+      "app": "Open via the app",
+      "Our": "Our daily services are at your",
+      "Hands": "Hands",
+      "offer": "What do we offer?",
+      "Influencers": "Influencers",
+      "Offers": " Offers and Discounts",
+      "Withdrawal ": "Withdrawal",
+      "Customer_Service ": "Customer Service",
+      "Consultation": "Consultation",
+      "App": "App",
+      "TextInfluencers": "Involve multiple influencers and help with mining.",
+      "TextOffers": " Offering offers, discounts, and free energy.",
+      "TextWithdrawal": "We offer a variety of withdrawal and digital currency services",
+      "TextCustomer_Service": "Our customer service team, consisting of 20 employees, is ready and available to assist you at all times.",
+      "TextConsultation": "I have a full team to provide solutions and advice for all inquiries.",
+      "TextApp": "You can easily log in using the Telegram app or the website",
+      "question": "Do you have a question?",
+      "stomer service": "A customer service representative will contact you as soon as possible.",
+      "energy": "Daily energy and profits",
+      "awaiting": "awaiting you",
+      "picks": "Learn about our top picks",
+      "TeaxtAbout": "Our project is based on a cloud mining system that allows users to invest in physical mining capacity managed through advanced data centers. When users deposit funds and purchase mining plans, these funds are used to operate and maintain the physical mining equipment, such as ASIC devices and mining servers, which continuously and efficiently mine cryptocurrencies. These funds are used to cover operational costs related to electricity, cooling, and maintenance to ensure the stability and efficiency of mining operations. The profits generated from physical mining are distributed to users according to their investment percentage and chosen mining plans. The technical infrastructure is developed and expanded to enhance mining capabilities and increase future returns. A referral system encourages user base growth, which increases transaction volume and enhances liquidity within the system. We work to professionally manage funds and investments to ensure competitive returns for users, while maintaining the sustainability of the project and providing high-quality services.",
+      "Read": "Read more",
+      "Less": "Read Less"
+    }
+  }
+}

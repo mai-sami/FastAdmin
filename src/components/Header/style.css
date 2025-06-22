@@ -1,0 +1,184 @@
+a,
+li {
+    text-decoration: none !important;
+    color: unset !important;
+}
+
+.link {
+    text-decoration: none !important;
+    color: unset !important;
+}
+
+.icons {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #903809;
+}
+
+@font-face {
+    font-family: boldFont;
+    src: url(../../assets/fonts/FSAlbertArabic-Bold.ttf);
+}
+
+@font-face {
+    font-family: regularFont;
+    src: url(../../assets/fonts/FSAlbertArabic-Regular.ttf);
+}
+
+.logo img {
+
+    width: 50px;
+    height: 50px;
+}
+
+.navbar {
+    box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+    padding: 0.85rem 1.15rem;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.image_logo {
+    border-radius: 50%;
+}
+
+.nav-item {
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.navbar-pg {
+    font-family: boldFont, serif;
+    margin-left: 8rem;
+    display: flex;
+    font-size: 14px;
+    width: 55%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+
+    /* margin-right:8rem; */
+}
+
+.navbar-pg .join-now {
+    color: #FF987A !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    font-size: 12px;
+    padding-left: 2.5rem;
+}
+
+.btn {
+    font-family: regularFont, serif;
+}
+
+.signUp {
+    margin-left: 20px;
+    color: #a7511b;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+.signIn {
+    background-color: #f8ae00 !important;
+    border: none;
+    border-radius: 6px;
+    border: 1px solid #f9b823e7 !important;
+    padding: 7.2px;
+    width: 7rem;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-pg {
+        margin-right: 0;
+
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+
+    .signIn {
+        width: 7rem;
+    }
+}
+
+.About__link {
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    display: flex;
+}
+
+.Comuncation__link {
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    display: flex;
+}
+
+.Service__link {
+    padding-top: 3rem;
+}
+
+.btn-registration.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.lang {
+    margin: 0 1.5rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.en_image {
+    width: 35px;
+    border-radius: 50%;
+    height: 35px;
+}
+
+.activeHeader {
+    background: white !important;
+}
+
+.inactiveHeader {
+    background: black !important;
+
+}
+
+/* start header admin */
+.name_Elemnts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+     margin: 0 1rem;
+}
+.logo_elemnts {
+    display: flex;
+    align-items: center;
+}
+.name_user {
+    font-size: 14px;
+    text-align: left;
+    justify-content: end;
+    display: flex;
+    font-weight: bold;
+}
+.active {
+  border-bottom: 2px solid #FF987A;
+  color: #FF987A !important;
+  font-weight: bolder;
+ }
