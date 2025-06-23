@@ -80,7 +80,7 @@ function HeaderItem() {
           </Nav>
 
           <Nav className="btn-registration">
-            <Link to="/signIn">
+            <Link to="/login">
               <Button className="btn signIn" variant="success">
                 {t("Login")}
               </Button>

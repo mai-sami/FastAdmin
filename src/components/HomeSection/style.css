@@ -123,6 +123,18 @@
     padding: 3rem;
 }
 
+.BlacksontactUsBox {
+    background-color: black;
+    display: flex;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+    padding: 2rem;
+    text-wrap: wrap;
+}
+
 /* slider styles */
 .slick-prev:before,
 .slick-next:before {
@@ -133,7 +145,6 @@
 }
 
 .relateBox {
-
     border-radius: 12px;
     background: #fff;
     display: flex !important;
@@ -143,6 +154,21 @@
     margin: 1rem !important;
     padding: .5rem;
     box-shadow: 0 3px 10px rgba(227, 132, 23, 0.2);
+    width: 350px !important;
+    height: 180px;
+    position: relative;
+}
+
+.BlackrelateBox {
+    background-color: black !important;
+    box-shadow: 0 3px 10px rgba(237, 229, 220, 0.907);
+    border-radius: 12px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem !important;
+    padding: .5rem;
     width: 350px !important;
     height: 180px;
     position: relative;
@@ -241,11 +267,12 @@
     outline: navajowhite;
     margin: 1rem 0;
     cursor: pointer;
-     border-radius: 5px;
+    border-radius: 5px;
     border: 1px solid #f2b20177;
 
 }
-.LoginBtun{
+
+.LoginBtun {
     width: 100% !important;
     padding: .8rem !important;
     font-size: 20px;

@@ -9,6 +9,7 @@ import { themeContext } from "../../context/themeContext";
 function ContactUs() {
   const { t } = useTranslation();
   const new_Langs = localStorage.getItem("lang");
+  const [theme, setTheme] = useContext(themeContext);
 
   return (
     <div>
@@ -23,8 +24,12 @@ function ContactUs() {
               }
             />
           </div>
-          <div className="sontactUsBox">
-            <div className="content_Box">
+          <div className="sontactUsBox" >
+            <div
+              className={
+                theme.theme === "light" ? "content_Box" : "BlacksontactUsBox"
+              }
+            >
               <div className="disBlock">
                 <p className="text__cinterP">{t("question")}</p>
 

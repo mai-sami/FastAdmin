@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Container } from "react-bootstrap";
 
 function SuportClose() {
   return (
-    <div>SuportClose</div>
-  )
+    <Container className="admin_home">
+      <p>الرسائل الغير مقروءة</p>
+    </Container>
+  );
 }
 
-export default SuportClose
+export default SuportClose;

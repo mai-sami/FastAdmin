@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Container } from "react-bootstrap";
 
 function SupportOpen() {
   return (
-    <div>SupportOpen</div>
-  )
+    <Container className="admin_home">
+      <p>الرسائل المفتوحة</p>
+    </Container>
+  );
 }
 
-export default SupportOpen
+export default SupportOpen;

@@ -55,6 +55,8 @@
     margin: auto;
     justify-content: space-between;
     align-items: center;
+        box-shadow: 0 3px 10px rgba(234, 224, 212, 0.977);
+
 }
 
 .content_Box {

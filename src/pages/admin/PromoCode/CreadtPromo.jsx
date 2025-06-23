@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Container } from "react-bootstrap";
 
 function CreadtPromo() {
   return (
-    <div>CreadtPromo</div>
-  )
+    <Container className="admin_home">
+      <p>اضافة كود جديد</p>
+    </Container>
+  );
 }
 
-export default CreadtPromo
+export default CreadtPromo;
