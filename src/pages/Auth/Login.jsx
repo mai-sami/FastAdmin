@@ -8,7 +8,7 @@ import { loginSchema } from "../../utils/Valdation";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAuth } from "../../hooks/useAuth";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 function Login() {
   const {
@@ -35,8 +35,6 @@ function Login() {
     <div>
       <Header />
       <Container>
-        <ToastContainer />
-        <div></div>
         <div className="introduction">
           <div className="row w-100 justify-content-between">
             <p className="com">،،</p>

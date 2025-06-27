@@ -15,9 +15,9 @@ import { Spinner } from "react-bootstrap";
 const App = () => {
   const Users = localStorage.getItem("user");
 
-  useEffect(() => {
-    if (!Users) Navigate("/", { replace: true });
-  }, [Users]);
+  // useEffect(() => {
+  //   if (!Users) Navigate("/", { replace: true });
+  // }, [Users]);
 
   const router = useRoutes(routes);
   const { i18n } = useTranslation();
@@ -34,6 +34,7 @@ const App = () => {
               </div>
             }
           >
+            
             {router}
           </Suspense>
         </div>

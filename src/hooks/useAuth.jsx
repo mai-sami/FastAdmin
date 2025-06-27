@@ -22,10 +22,15 @@ export const useAuth = () => {
         hideProgressBar: false,
         position: "top-right",
       });
+      localStorage.setItem("user", JSON.stringify(response.data.admin));
+      localStorage.setItem(
+        "token",
+        JSON.stringify(response.data.admin.api_token)
+      );
       setIsLoading(false);
-      localStorage.setItem("user", JSON.stringify(response.data));
-      localStorage.setItem("token", JSON.stringify(response.data.api_token));
-      navigate("/admins/dashboard");
+      setTimeout(() => {
+        navigate("/admins/dashboard");
+      }, 900);
     } catch (e) {
       setIsLoading(false);
       toast.error("تأكد من كلمة المرور والبريد الالكتروني", {

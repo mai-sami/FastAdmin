@@ -18,14 +18,7 @@ function Header() {
     i18n.changeLanguage(newLang);
   };
   const new_Langs = localStorage.getItem("lang");
-  const Users = localStorage.getItem("user");
-  console.log(Users, "Users");
-  const navigate = useNavigate();
-
-  const Logout = () => {
-    localStorage.removeItem("Users");
-    navigate("/");
-  };
+  const Users = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
       <Navbar
@@ -37,8 +30,10 @@ function Header() {
           <Navbar.Brand href="/" className="logo logo_elemnts">
             <img src={logo} alt="logo" className="image_logo" />
             <div className="name_Elemnts">
-              <span className="name_user">Mai Sami Jaber</span>
-              <span className="name_user">email.com</span>
+              <span className="name_user">{Users.name}</span>
+              <span className="name_user">
+                {Users.email || "البريد الالكتروني"}
+              </span>
             </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -73,11 +68,7 @@ function Header() {
             </Nav>
             <Nav className="btn-registration">
               <Link to="/signIn">
-                <Button
-                  onClick={Logout()}
-                  className="btn signIn"
-                  variant="success"
-                >
+                <Button className="btn signIn" variant="success">
                   تسجيل الخروج
                 </Button>
               </Link>

@@ -53,20 +53,16 @@
          align-items: center;
 
      }
-
      .secand__section {
          width: unset;
      }
  }
-
  @media (min-width: 1000px) {
      .all__card {
          display: grid;
          grid-template-columns: repeat(3, 1fr);
          margin: auto;
-
      }
-
      .secand__section {
          width: unset !important;
      }

@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 import { Outlet } from "react-router-dom";
- import { Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import Footer from "../components/Footer";
 const Header = lazy(() => import("../components/admin/Header"));
 
