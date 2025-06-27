@@ -108,6 +108,16 @@
     .about__sections {
         display: none
     }
+    .ContactSection{
+        display: block
+    }
 }
+@media (min-width: 790px) and  (max-width: 990px) {
+   
+    .ContactSection{
+        display: block
+    }
+}
+
 
 ;

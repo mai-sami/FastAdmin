@@ -1,3 +1,7 @@
+ 
+ body{
+    overflow-x: hidden;
+ }
  .all__card {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
@@ -9,7 +13,7 @@
      color: #707070;
      font-family: 'regularFont';
      font-size: 12px;
-  }
+ }
 
  .secand__section {
      padding-top: 3rem;
@@ -23,7 +27,7 @@
      margin: auto;
  }
 
- @media (min-width: 500px) {
+ @media (max-width: 500px) {
      .all__card {
          display: grid;
          grid-template-columns: repeat(1, 1fr);
@@ -45,6 +49,8 @@
          display: grid;
          grid-template-columns: repeat(2, 1fr);
          margin: auto;
+         justify-content: center;
+         align-items: center;
 
      }
 
