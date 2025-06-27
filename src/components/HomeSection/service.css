@@ -68,7 +68,7 @@
      }
 
      .secand__section {
-         width: 70%;
+         width: unset !important;
      }
 
  }

@@ -73,7 +73,11 @@ function Header() {
             </Nav>
             <Nav className="btn-registration">
               <Link to="/signIn">
-                <Button onClick={Logout()} className="btn signIn" variant="success">
+                <Button
+                  onClick={Logout()}
+                  className="btn signIn"
+                  variant="success"
+                >
                   تسجيل الخروج
                 </Button>
               </Link>
