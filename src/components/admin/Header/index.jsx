@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "../../../utils/i18next";
 import ToggleButton from "../../ToggleButton";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../../assets/images/Ellipse 33.png";
 import en from "../../../assets/images/flag.png";
 import ar from "../../../assets/images/ar.jpg";
@@ -18,6 +18,14 @@ function Header() {
     i18n.changeLanguage(newLang);
   };
   const new_Langs = localStorage.getItem("lang");
+  const Users = localStorage.getItem("user");
+  console.log(Users, "Users");
+  const navigate = useNavigate();
+
+  const Logout = () => {
+    localStorage.removeItem("Users");
+    navigate("/");
+  };
   return (
     <div>
       <Navbar
@@ -63,13 +71,13 @@ function Header() {
                 Promo Code
               </NavLink>
             </Nav>
-               <Nav className="btn-registration">
-                        <Link to="/signIn">
-                          <Button className="btn signIn" variant="success">
-                           تسجيل الخروج
-                          </Button>
-                        </Link>
-                      </Nav>
+            <Nav className="btn-registration">
+              <Link to="/signIn">
+                <Button onClick={Logout()} className="btn signIn" variant="success">
+                  تسجيل الخروج
+                </Button>
+              </Link>
+            </Nav>
             <Nav className="btn-registration">
               <button onClick={changeLanguage} className=" lang">
                 {new_Langs === "en" ? (

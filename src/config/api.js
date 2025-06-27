@@ -1,1 +1,1 @@
-export const API_URL = 'https://react-tt-api.onrender.com/api';
+export const API_URL = 'http://localhost:8000/api';

@@ -7,7 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import "./style.css";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Paper from "@mui/material/Paper";
 function createData(id, name, calories, fat, carbs, proteins, protein, status) {
   return { id, name, calories, fat, carbs, proteins, protein, status };
@@ -28,18 +28,15 @@ function Users() {
           <div className="header__search">
             <input
               className="header__searchInput"
-              placeholder=" .... بحث    "
+              placeholder=" .... بحث "
               type="text"
             />
             <SearchIcon className="header__searchIcon" />
           </div>
           <div className="header__search">
-            <input
-              className="header__searchInput"
-              placeholder=" .... بحث    "
-              type="text"
-            />
-            <SearchIcon className="header__searchIcon" />
+            <Button variant="primary" className="craete_modepromo">
+              إنشاء الكود
+            </Button>
           </div>
         </div>
         <br />

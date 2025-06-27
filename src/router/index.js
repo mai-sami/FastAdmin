@@ -6,7 +6,7 @@ import HomePromoCode from "../pages/admin/PromoCode/HomePromoCode";
 
 const Home = lazy(() => import("../pages/Home"));
 const Dashboard = lazy(() => import("../pages/admin/Dashboard"));
- 
+
 const Users = lazy(() => import("../pages/admin/Users"));
 const Massges = lazy(() => import("../pages/admin/Massges"));
 const SupportOpen = lazy(() => import("../pages/admin/SupportOpen"));
@@ -14,10 +14,7 @@ const SuportClose = lazy(() => import("../pages/admin/SuportClose"));
 const Login = lazy(() => import("../pages/Auth/Login"));
 
 export const router = [
-  {
-    index: true,
-    element: <Home />,
-  },
+  { index:true, element: <Home /> },
   {
     path: "/",
     element: <BaseLayout />,

@@ -7,14 +7,45 @@ import four from "../../../assets/images/seven.jpg";
 import five from "../../../assets/images/تنزيل.jpg";
 import six from "../../../assets/images/Ellipse 31.png";
 import { themeContext } from "../../../context/themeContext";
+import Rating from "@mui/material/Rating";
 
 const data = [
-  { text: "الدكتور عز الدين", image: one, subTitle: "من أروع التطبيقات" },
-  { text: "الدكتور عز الدين", image: five, subTitle: "من أروع التطبيقات" },
-  { text: "الدكتور عز الدين", image: two, subTitle: "من أروع التطبيقات" },
-  { text: "الدكتور عز الدين", image: three, subTitle: "من أروع التطبيقات" },
-  { text: "الدكتور عز الدين", image: four, subTitle: "من أروع التطبيقات" },
-  { text: "الدكتور عز الدين", image: six, subTitle: "من أروع التطبيقات" },
+  {
+    text: "الدكتور عز الدين",
+    image: one,
+    rate: 5,
+    subTitle: " ♥️تحية من قلب غزة النابض على مصداقيتكم العالية",
+  },
+  {
+    text: "الدكتور عز الدين",
+    image: five,
+    rate: 4.5,
+    subTitle: "أفضل مكان للاسثمار، كل الدعم والامتنان لكم",
+  },
+  {
+    text: "الدكتور عز الدين",
+    image: two,
+    rate: 5,
+    subTitle: "نوجه لكم خالص التحيات بالتوفيق لنا ولكم",
+  },
+  {
+    text: "الدكتور عز الدين",
+    image: three,
+    rate: 5,
+    subTitle: "استثمار جميل، كل الاحترام والتقدير على المصداقية والشفافية ",
+  },
+  {
+    text: "الدكتور عز الدين",
+    image: four,
+    rate: 5,
+    subTitle: "أفضل شركه استثمار الدعم الفني جدا ممتاز وسريع",
+  },
+  {
+    text: "الدكتور عز الدين",
+    image: six,
+    rate: 4.5,
+    subTitle: "♥️أفضل مكان للاسثمار، كل الدعم والامتنان لكم",
+  },
 ];
 function SlidersEl() {
   var settings = {
@@ -64,6 +95,13 @@ function SlidersEl() {
             <div className="reate_evel">
               <p className="text__cinterP">{item.text}</p>
               <p className="p__P">{item.subTitle}</p>
+              <Rating
+                name="half-rating-read"
+                defaultValue={item.rate}
+                precision={0.5}
+                readOnly
+                className="rating__slider"
+              />
             </div>
           </div>
         ))}

@@ -4,6 +4,11 @@
 
  }
 
+ .admin_home {
+     padding: 7rem 0;
+     cursor: pointer;
+ }
+
  .level_flex {
      display: flex;
      align-items: center;
@@ -46,4 +51,93 @@
      height: 40px !important;
      padding: 5.5px;
      background-color: #009fd0;
+ }
+
+
+
+ /* style promo */
+ .create_promoPAge {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: .5rem;
+ }
+
+ /* model style */
+ .modal.show .modal-dialog {
+     margin-top: 12rem;
+ }
+
+ .modal-content {
+     border-top-left-radius: 22px;
+     border-top-right-radius: 22px;
+     border: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .modal-header {
+     border-top-left-radius: 22px;
+     border-top-right-radius: 22px;
+     background: #FF987A;
+     width: 100%;
+     align-items: center;
+     color: white;
+     display: flex;
+     justify-content: center;
+ }
+
+ .modal-body {
+     width: 100%;
+ }
+
+ .form_data {
+     width: 100%;
+ }
+
+ .flex_input {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 1rem 0;
+ }
+
+ .modal-headers {
+     width: 100%;
+     align-items: center;
+     display: flex;
+     justify-content: center;
+
+ }
+
+ .input_form {
+     padding: .6rem;
+     width: 80%;
+     outline: navajowhite;
+     cursor: pointer;
+     margin: auto;
+     border-radius: 5px;
+     border: 1px solid #896501bd;
+ }
+
+ .craete_modepromo {
+     background-color: #FF987A !important;
+     border: none;
+     border-radius: 6px;
+     border: 1px solid #FF987A !important;
+     padding: .6rem;
+     width: 12rem;
+     font-size: 16px;
+ }
+
+ .craete {
+     background-color: #FF987A !important;
+     border: none;
+     border-radius: 6px;
+     border: 1px solid #FF987A !important;
+     padding: .6rem;
+     width: 16rem;
+     font-size: 16px;
  }

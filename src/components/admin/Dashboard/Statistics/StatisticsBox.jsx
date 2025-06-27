@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "../style.css";
-import { Col } from "react-bootstrap";
+import { Badge, Col } from "react-bootstrap";
 import adduser from "../../../../assets/images/info.png";
 import efood from "../../../../assets/images/info.png";
 import greemFood from "../../../../assets/images/info.png";
@@ -8,6 +8,7 @@ import redFood from "../../../../assets/images/info.png";
 import { themeContext } from "../../../../context/themeContext";
 import { Link } from "react-router-dom";
 import ChartElemnt from "./ChartElemnt";
+import MailIcon from "@mui/icons-material/Mail";
 
 var Shows = [
   {
@@ -103,7 +104,12 @@ function StatisticsBox() {
         إحصائيات سريعة
         <ChartElemnt />
       </div>
-      @devexpress/dx-react-chart-material-ui
+      <Badge badgeContent={4} color="primary">
+        <MailIcon color="action" />
+      </Badge>
+      <Badge badgeContent={4} color="success">
+        <MailIcon color="action" />
+      </Badge>{" "}
     </div>
   );
 }

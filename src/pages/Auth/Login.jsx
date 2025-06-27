@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "../../components/Header";
 import { useTranslation } from "react-i18next";
-import { Button, Container, ToastContainer } from "react-bootstrap";
-import introImg from "../../assets/images/intro.jpg";
+import { Button, Container, Spinner } from "react-bootstrap";
+import introImg from "../../assets/images/freepik_assistant_1750705321541.png";
 import "../.././components/HomeSection/style.css";
 import { loginSchema } from "../../utils/Valdation";
 import { useForm } from "react-hook-form";
-// import { ToastContainer } from "react-toastify";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useAuth } from "../../hooks/useAuth";
+import { toast, ToastContainer } from "react-toastify";
 
 function Login() {
   const {
@@ -15,8 +17,10 @@ function Login() {
     getValues,
     formState: { errors },
   } = useForm({
-    resolver: loginSchema,
+    resolver: yupResolver(loginSchema),
   });
+  const { loginAction, isLoading } = useAuth();
+
   const onSubmit = () => {
     const email = getValues("email");
     const password = getValues("password");
@@ -24,61 +28,69 @@ function Login() {
       email,
       password,
     };
-    // loginUser(userData);
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 2000);
+    loginAction(userData);
   };
-
   const { t } = useTranslation();
   return (
     <div>
-      <ToastContainer />
-
       <Header />
       <Container>
+        <ToastContainer />
+        <div></div>
         <div className="introduction">
           <div className="row w-100 justify-content-between">
             <p className="com">،،</p>
-            <div className="col-md-6 intro">
+            <div className="col-md-5 intro">
               <h1 className="">تسجيل الدخول</h1>
-              <form
-                // onSubmit={handleSubmit(onSubmit)}
-                className="input_filed"
-              >
-                <input
-                  name="email"
-                  // {...register("email")}
-                  // border={errors?.email ? " red" : "green"}
-                  placeholder="البريد الالكتروني"
-                  className="input_email"
-                />
-                <p className="text-danger">
-                  djgdrubg rghirohgir
-                  {/* {errors.email && <p>{errors.email.message}</p>} */}
-                </p>
-                <input
-                  // {...register("password")}
-                  placeholder="كلمة المرور"
-                  className="input_email"
-                  // border={errors?.password ? "red" : "green"}
-                />
-                <p className="text-danger">
-                  {/* {errors.password && <p>{errors.password.message}</p>} */}
-                </p>
-                <Button className="btn signIn LoginBtun" variant="success">
-                  {t("Login")}
-                </Button>{" "}
-              </form>
+              <ToastContainer />
+              {isLoading ? (
+                <div className="Spinner_admin">
+                  <Spinner animation="border" variant="warning" />
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit(onSubmit)} className="input_filed">
+                  <input
+                    name="email"
+                    {...register("email")}
+                    className={
+                      errors?.email ? "input_email error_input" : "input_email"
+                    }
+                    placeholder="البريد الالكتروني"
+                  />
+                  <p className="text-danger">
+                    {errors.email && <p>{errors.email.message}</p>}
+                  </p>
+                  <input
+                    {...register("password")}
+                    placeholder="كلمة المرور"
+                    className={
+                      errors?.password
+                        ? "input_email error_input"
+                        : "input_email"
+                    }
+                  />
+                  <p className="text-danger">
+                    {errors.password && <p>{errors.password.message}</p>}
+                  </p>
+                  <Button
+                    className="btn signIn LoginBtun"
+                    type="submit"
+                    variant="success"
+                  >
+                    {t("Login")}
+                  </Button>{" "}
+                </form>
+              )}
             </div>
             <div className="col-md-6 ">
               <img
                 id="image__section"
                 src={introImg}
                 alt="introImg"
-                className="w-100"
+                className="lgin_image"
               />
             </div>
+            <ToastContainer />
           </div>
         </div>
       </Container>

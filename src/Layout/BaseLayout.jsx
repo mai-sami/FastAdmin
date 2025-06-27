@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Outlet } from "react-router-dom";
+ import { Spinner } from "react-bootstrap";
 import Footer from "../components/Footer";
-import { Spinner } from "react-bootstrap";
 const Header = lazy(() => import("../components/admin/Header"));
 
 export function BaseLayout() {
@@ -11,7 +11,7 @@ export function BaseLayout() {
       <Suspense fallback={<Spinner />}>
         <Outlet />
       </Suspense>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
