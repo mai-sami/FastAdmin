@@ -10,6 +10,7 @@ import en from "../../assets/images/flag.png";
 import ar from "../../assets/images/ar.jpg";
 import { useTranslation } from "react-i18next";
 import { themeContext } from "../../context/themeContext";
+import { NavLink } from "react-router-dom";
 
 function HeaderItem() {
   const [theme, setTheme] = useContext(themeContext);
@@ -37,16 +38,15 @@ function HeaderItem() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="navbar-pg">
-            <Link
-              exact
+            <NavLink
               smooth={true}
               duration={500}
-              to="/"
               activeClassName="join-now"
-              className="nav-item  "
+              className="nav-item"
+              to="/"
             >
               {t("Home")}
-            </Link>
+            </NavLink>
             <Link
               to="about"
               activeClassName="join-now"
@@ -80,11 +80,11 @@ function HeaderItem() {
           </Nav>
 
           <Nav className="btn-registration">
-            <Link to="/login">
+            <NavLink to="/login">
               <Button className="btn signIn" variant="success">
                 {t("Login")}
               </Button>
-            </Link>
+            </NavLink>
           </Nav>
           <Nav className="btn-registration">
             <button onClick={changeLanguage} className=" lang">

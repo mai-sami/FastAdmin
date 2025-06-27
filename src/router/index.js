@@ -14,9 +14,9 @@ const SuportClose = lazy(() => import("../pages/admin/SuportClose"));
 const Login = lazy(() => import("../pages/Auth/Login"));
 
 export const router = [
-  { index:true, element: <Home /> },
+  {path: "/", element: <Home /> },
   {
-    path: "/",
+    path: "",
     element: <BaseLayout />,
     children: [
       { path: "admins/dashboard", element: <Dashboard /> },

@@ -23,8 +23,8 @@ const App = () => {
           <GlobalStyle dir={i18n.language === "en" ? "ltr" : "rtl"} />
           <Suspense
             fallback={
-              <div className="spinner">
-                <Spinner />
+              <div className="Spinner_admin appShow">
+                <Spinner animation="border" variant="warning" />
               </div>
             }
           >

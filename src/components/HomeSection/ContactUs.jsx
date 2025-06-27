@@ -13,7 +13,7 @@ function ContactUs() {
 
   return (
     <div>
-      <Element name="contact">
+      <Element name="comuncation">
         <div className="ContactSection">
           <div className=" ">
             <img
