@@ -11,13 +11,14 @@ import { router as routes } from "./router";
 import { themeContext } from "./context/themeContext";
 import { useTranslation } from "react-i18next";
 import { Spinner } from "react-bootstrap";
+import { useGetData } from "./hooks/useGetData";
+import { config } from "./config/headerConfig";
 
 const App = () => {
-  const Users = localStorage.getItem("user");
-
-  // useEffect(() => {
-  //   if (!Users) Navigate("/", { replace: true });
-  // }, [Users]);
+  const { getAdminInfluencer } = useGetData();
+  useEffect(() => {
+    getAdminInfluencer(config);
+  }, []);
 
   const router = useRoutes(routes);
   const { i18n } = useTranslation();
@@ -34,7 +35,6 @@ const App = () => {
               </div>
             }
           >
-            
             {router}
           </Suspense>
         </div>

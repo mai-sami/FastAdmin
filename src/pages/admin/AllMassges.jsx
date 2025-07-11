@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { Container, Spinner } from "react-bootstrap";
-import { useGetData } from "../../hooks/useGetData";
+import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Accordion from "@mui/material/Accordion";
+import { useGetData } from "../../hooks/useGetData";
 import Pagination from "@mui/material/Pagination";
 
-function SuportClose() {
+function AllMassges() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  const { getAdminClosrdTicket, closedTicket, isLoading } = useGetData();
+  const { getAdminOpenTicket, openTicket, isLoading } = useGetData();
   useEffect(() => {
-    getAdminClosrdTicket(page);
+    getAdminOpenTicket(page);
   }, [page]);
   return (
     <Container className="admin_home">
-      <p>الرسائل الغير مقروءة</p>
+      <p>الرسائل المفتوحة</p>
       {isLoading ? (
         <div className="Spinner_admin">
           <Spinner animation="border" variant="warning" />
         </div>
       ) : (
         <div>
-          {closedTicket.length === 0 && (
-            <div className="no_ticket">لا توجد تذاكر مغلقة</div>
+          {openTicket.length === 0 && (
+            <div className="no_ticket">لا توجد تذاكر مفتوحة</div>
           )}
-          {closedTicket?.map((ticket, index) => (
+          {openTicket?.map((ticket, index) => (
             <Accordion key={ticket.id} className="accordion_ticket">
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -36,10 +36,9 @@ function SuportClose() {
                 id="panel1-header"
               >
                 <Typography component="span">
-                  <span className="ticket_id">
-                    {" "}
+                  <span>
                     {ticket.subject}
-                    {index + 1}
+                    <span className="ticket_id"> {index + 1} </span>
                   </span>
                 </Typography>
               </AccordionSummary>
@@ -60,4 +59,4 @@ function SuportClose() {
   );
 }
 
-export default SuportClose;
+export default AllMassges;

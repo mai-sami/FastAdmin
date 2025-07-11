@@ -11,7 +11,7 @@ export function BaseLayout() {
       <Suspense fallback={<Spinner />}>
         <Outlet />
       </Suspense>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

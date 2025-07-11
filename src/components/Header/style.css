@@ -87,6 +87,12 @@ li {
 
 }
 
+.btn_send {
+    background-color: #f8ae00 !important;
+    border: 1px solid #f9b823e7 !important;
+
+}
+
 .signIn {
     background-color: #f8ae00 !important;
     border: none;
@@ -164,12 +170,14 @@ li {
     display: flex;
     flex-direction: column;
     align-items: start;
-     margin: 0 1rem;
+    margin: 0 1rem;
 }
+
 .logo_elemnts {
     display: flex;
     align-items: center;
 }
+
 .name_user {
     font-size: 14px;
     text-align: left;
@@ -177,8 +185,9 @@ li {
     display: flex;
     font-weight: bold;
 }
+
 .active {
-  border-bottom: 2px solid #FF987A;
-  color: #FF987A !important;
-  font-weight: bolder;
- }
+    border-bottom: 2px solid #FF987A;
+    color: #FF987A !important;
+    font-weight: bolder;
+}

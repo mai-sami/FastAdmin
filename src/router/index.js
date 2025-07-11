@@ -2,6 +2,9 @@ import { lazy } from "react";
 import NotFound from "../pages/Home/NotFound";
 import { BaseLayout } from "../Layout/BaseLayout";
 import HomePromoCode from "../pages/admin/PromoCode/HomePromoCode";
+import DashboardInfluencer from "../pages/influencer/DashboardInfluencer";
+import AdminInfluencer from "../pages/admin/AdminInfluencer";
+import CreadtPromo from "../pages/admin/PromoCode/CreadtPromo";
 // pages
 
 const Home = lazy(() => import("../pages/Home"));
@@ -14,7 +17,7 @@ const SuportClose = lazy(() => import("../pages/admin/SuportClose"));
 const Login = lazy(() => import("../pages/Auth/Login"));
 
 export const router = [
-  { index:true, element: <Home /> },
+  { index: true, element: <Massges /> },
   {
     path: "/",
     element: <BaseLayout />,
@@ -25,9 +28,15 @@ export const router = [
       { path: "/admin/massge", element: <Massges /> },
       { path: "/admin/support-open", element: <SupportOpen /> },
       { path: "/admin/support-close", element: <SuportClose /> },
+      { path: "/admin/create-promo", element: <CreadtPromo /> },
+
+      { path: "/admin/influencer", element: <AdminInfluencer /> },
+
       // { path: "/job-details/:id", element: <JobsDetails /> },
     ],
   },
   { path: "/login", element: <Login /> },
+  { path: "/influenser/dahsboard", element: <DashboardInfluencer /> },
+
   { path: "*", element: <NotFound /> },
 ];

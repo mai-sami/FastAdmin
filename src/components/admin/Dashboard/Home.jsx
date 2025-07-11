@@ -1,28 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./style.css";
 import userStop from "../../../assets/images/userStop.png";
 import userse from "../../../assets/images/userse.png";
 import info from "../../../assets/images/info.png";
 
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import StatisticsBox from "./Statistics/StatisticsBox";
 import { themeContext } from "../../../context/themeContext";
+import { config } from "../../../config/headerConfig";
+import { useGetData } from "../../../hooks/useGetData";
+
+const dataCount = JSON.parse(localStorage.getItem("CountDeatilsPublic"));
+
 var lists = [
   {
     image: userse,
     role: "3",
     name: "إجمالي عدد المشتركين بالموقع",
-    number: 33,
+    number: dataCount.userCount || 0,
   },
   {
     image: userStop,
     role: "1",
     name: "إجمالي عدد الرسائل المفتوحة",
-    number: 33,
+    number: dataCount.openTickets?.length || 0,
   },
-  { image: info, name: "إجمالي عدد الرسائل المغلقة", role: "2", number: 33 },
+  {
+    image: info,
+    name: "إجمالي عدد الرسائل المغلقة",
+    role: "2",
+    number: dataCount.closedTickets?.length || 0,
+  },
 ];
-
 function Home() {
   const getBadgeColor = (role) => {
     switch (role) {
@@ -36,6 +45,20 @@ function Home() {
         return "#0000";
     }
   };
+  const {
+    getAdminOpenTicket,
+    getAdminClosrdTicket,
+    getAdminPromoCode,
+    GetAdminDashboardDetailss,
+  } = useGetData();
+
+  useEffect(() => {
+    GetAdminDashboardDetailss(config);
+    getAdminPromoCode(config);
+    getAdminClosrdTicket(config);
+    getAdminOpenTicket(config);
+  }, []);
+  // getAdminDashboardDetails
   const [theme, setTheme] = useContext(themeContext);
   return (
     <div className="admin_home">

@@ -1,38 +1,33 @@
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Base_Url } from "../api/api";
-import { config } from "../api/headerConfig";
+import { API_URL } from "../config/api";
+import { config } from "../config/headerConfig";
+import { Navigate } from "react-router-dom";
 
 export const useTasks = () => {
-  const [tasks, setTasks] = useState([]);
-  const [addTask, setAddTasks] = useState([]);
+  const [data, setData] = useState([]);
+  const [deleteusers, setdeleteusers] = useState([]);
+
+  const [createPromodata, setCreatePromodata] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
+  const [active, setActive] = useState("");
+  const [massges, setMassges] = useState("");
 
-  const getTasks = async (page,limit) => {
-    try {
-      setLoading(true);
-      const response = await axios.get(`${Base_Url}tasks/all-tasks`, config);
-      setLoading(false);
-      setTasks(response.data.tasks);console.log(response.data.tasks)
-    } catch (error) {
-      setLoading(false);
-
-      setError(error.message);
-    }
-  };
-  const createTasks = async (userData) => {
+  const CreatePromoCode = async (formData) => {
     try {
       setLoading(true);
       const response = await axios.post(
-        `${Base_Url}tasks/add-task`,
-        userData,
-        config
+        `${API_URL}/admin/promo-codes`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
-      setLoading(false);
-      setAddTasks(response.data);
-      toast.success("تم انشاء المهمة بنجاح ", {
+      toast.success("تم انشاء الكود بنجاح ", {
         icon: "👏",
         disableTimeOut: false,
         titleClass: "toaster_title",
@@ -40,9 +35,11 @@ export const useTasks = () => {
         timeOut: 5000,
         closeButton: true,
       });
-    } catch (error) {
       setLoading(false);
-      toast.error("انتبه - لم يتم انشاء المهمة", {
+      setCreatePromodata(response.data.data);
+      console.log(response.data.data, "formData");
+    } catch (error) {
+      toast.error("انتبه - يرجى التأكد من البيانات المدخلة", {
         icon: "😔",
         disableTimeOut: false,
         titleClass: "toaster_title",
@@ -50,20 +47,20 @@ export const useTasks = () => {
         timeOut: 5000,
         closeButton: true,
       });
-
+      setLoading(false);
       setError(error.message);
     }
   };
-  const deleteTasks = async (id) => {
+  const deletePromoCode = async (id) => {
     try {
       setLoading(true);
       const response = await axios.delete(
-        `${Base_Url}tasks/delete-task/${id}`,
-        config
+        `${API_URL}/admin/promo-codes/${id}`,
+        { params: config }
       );
       setLoading(false);
-      setAddTasks(response.data);
-      toast.success("تم حذف المهمة بنجاح ", {
+      setData(response.data);
+      toast.success("تم حذف الكود بنجاح ", {
         icon: "👏",
         disableTimeOut: false,
         titleClass: "toaster_title",
@@ -85,15 +82,77 @@ export const useTasks = () => {
       setError(error.message);
     }
   };
-  const updateTasks = async (id) => {
+  const deleteUsers = async (id) => {
+    try {
+      setLoading(true);
+      const response = await axios.delete(`${API_URL}/admin/users/${id}`, {
+        params: config,
+      });
+      setLoading(false);
+      setdeleteusers(response.data);
+      toast.success("تم حذف المستخدم بنجاح ", {
+        icon: "👏",
+        disableTimeOut: false,
+        titleClass: "toaster_title",
+        messageClass: "toaster_messge",
+        timeOut: 5000,
+        closeButton: true,
+      });
+    } catch (error) {
+      setLoading(false);
+      toast.error("انتبه - لم يتم حذف المهمة", {
+        icon: "😔",
+        disableTimeOut: false,
+        titleClass: "toaster_title",
+        messageClass: "toaster_messge",
+        timeOut: 5000,
+        closeButton: true,
+      });
+
+      setError(error.message);
+    }
+  };
+  const CahngeUserStatusActive = async (id, status) => {
     try {
       setLoading(true);
       const response = await axios.put(
-        `${Base_Url}tasks/edit-task/ ${id}`,
+        `${API_URL}/admin/users/${id}/${status}`,
         config
       );
       setLoading(false);
-      setAddTasks(response.data);
+      setActive(response.data);
+      toast.success("تم تعديل حالة المستخدم بنجاح ", {
+        icon: "👏",
+        disableTimeOut: false,
+        titleClass: "toaster_title",
+        messageClass: "toaster_messge",
+        timeOut: 5000,
+        closeButton: true,
+      });
+    } catch (error) {
+      setLoading(false);
+      toast.error("انتبه - لم يتم تعديل حالة المستخدم المهمة", {
+        icon: "😔",
+        disableTimeOut: false,
+        titleClass: "toaster_title",
+        messageClass: "toaster_messge",
+        timeOut: 5000,
+        closeButton: true,
+      });
+
+      setError(error.message);
+    }
+  };
+
+  const updatePromoCode = async (id) => {
+    try {
+      setLoading(true);
+      const response = await axios.put(
+        `${API_URL}tasks/edit-task/ ${id}`,
+        config
+      );
+      setLoading(false);
+      setData(response.data);
       toast.success("تم تعديل المهمة بنجاح ", {
         icon: "👏",
         disableTimeOut: false,
@@ -116,5 +175,59 @@ export const useTasks = () => {
       setError(error.message);
     }
   };
-  return { getTasks, tasks, updateTasks, deleteTasks, isLoading, createTasks };
+  const CreateMassges = async (formData) => {
+    try {
+      setLoading(true);
+      const response = await axios.post(
+        `${API_URL}/admin/send-message`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      console.log(response, "masgesresponse");
+      setMassges(response.data.data);
+
+      toast.success("تم إرسال الرسائل بنجاح ", {
+        icon: "👏",
+        disableTimeOut: false,
+        titleClass: "toaster_title",
+        messageClass: "toaster_messge",
+        timeOut: 5000,
+        closeButton: true,
+      });
+      setLoading(false);
+
+    } catch (error) {
+      toast.error("انتبه - يرجى التأكد من البيانات المدخلة", {
+        icon: "😔",
+        disableTimeOut: false,
+        titleClass: "toaster_title",
+        messageClass: "toaster_messge",
+        timeOut: 5000,
+        closeButton: true,
+      });
+      setLoading(false);
+      setError(error.message);
+    }
+  };
+  const UpdatePromoCodes = async (promoData) => {
+    return await axios.post(`${API_URL}/admin/update-promo`, promoData, config);
+  };
+  return {
+    updatePromoCode,
+    deletePromoCode,
+    CreatePromoCode,
+    data,
+    CreateMassges,
+    deleteusers,
+    CahngeUserStatusActive,
+    createPromodata,
+    isLoading,
+    deleteUsers,
+    UpdatePromoCodes,
+    massges,
+  };
 };

@@ -1,0 +1,40 @@
+.box_influencer {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.link_ingo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shear_links {
+    outline: none;
+    border-radius: 12px;
+    padding: .8rem;
+    width: 80%;
+    outline: navajowhite;
+    margin: 1rem 0;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #896501bd;
+}
+
+.LinksShare {
+    background-color: #f8ae00 !important;
+    border: none;
+    border-radius: 6px;
+    padding: .7rem;
+    border: 1px solid #f9b823e7 !important;
+    font-size: 15px;
+    width: 200px;
+    margin: 0 .5rem;
+
+}

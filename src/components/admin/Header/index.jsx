@@ -19,6 +19,7 @@ function Header() {
   };
   const new_Langs = localStorage.getItem("lang");
   const Users = JSON.parse(localStorage.getItem("user"));
+  // console.log(Users.length);
   return (
     <div>
       <Navbar

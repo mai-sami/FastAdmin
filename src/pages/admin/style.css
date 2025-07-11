@@ -2,11 +2,13 @@
      border-radius: 2px;
      width: 100%;
 
+
  }
 
  .admin_home {
      padding: 7rem 0;
      cursor: pointer;
+     align-items: center;
  }
 
  .level_flex {
@@ -101,7 +103,56 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
-     margin: 1rem 0;
+     margin: .6rem 0;
+ }
+
+ .error_input {
+     border: 2px solid red !important;
+
+
+ }
+
+ .flex_item {
+     display: flex;
+     align-items: baseline;
+ }
+
+ .Btn {
+     border: none;
+     border-radius: 6px;
+     padding: .6rem;
+     width: 12rem;
+     font-size: 16px;
+ }
+
+ .DeleteIcon {
+     color: red;
+ }
+
+ .span_delete {
+     margin: 3rem;
+     font-size: 20px;
+     font-weight: bold;
+ }
+
+ .dangers {
+     background-color: red !important;
+
+     margin: .5rem;
+ }
+
+ .backs {
+     background-color: #f19e34 !important;
+     margin: .5rem;
+
+ }
+
+ .EditIcon {
+     color: #f8b747;
+ }
+
+ .create_name {
+     width: 120px;
  }
 
  .modal-headers {
@@ -114,12 +165,39 @@
 
  .input_form {
      padding: .6rem;
-     width: 80%;
+     width: 70%;
      outline: navajowhite;
      cursor: pointer;
      margin: auto;
      border-radius: 5px;
      border: 1px solid #896501bd;
+ }
+
+ .input_form_massges {
+     padding: 1rem;
+     width: 70%;
+     min-height: 60px;
+     outline: navajowhite;
+     cursor: pointer;
+     border-radius: 5px;
+     border: 1px solid #896501bd;
+ }
+
+ .textArea {
+     min-height: 90px !important;
+
+ }
+
+ .input_forms_masges {
+     padding: .6rem;
+     width: 70%;
+     min-height: 60px;
+     outline: navajowhite;
+     cursor: pointer;
+     border-radius: 5px;
+     margin-top: .8rem;
+     border: 1px solid #896501bd;
+
  }
 
  .craete_modepromo {
@@ -140,4 +218,176 @@
      padding: .6rem;
      width: 16rem;
      font-size: 16px;
+ }
+
+ .css-1xra8g6-MuiPagination-root {
+     display: flex;
+     justify-content: center;
+     margin-top: 2rem;
+     color: unset !important;
+ }
+
+ .css-1jeh93f-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+     background-color: #f19e34 !important;
+ }
+
+ .ticket_id {
+     margin: 0 1rem;
+     color: #FF987A;
+     font-weight: bolder;
+     font-size: 20px;
+ }
+
+ .no_ticket {
+     display: flex;
+     justify-content: center;
+     color: red;
+     font-weight: bolder;
+     margin: 1rem 0;
+ }
+
+ .css-1c5o7vy-MuiPagination-ul {
+     width: 80%;
+     justify-content: space-evenly;
+ }
+
+ .sucssesCircul {
+     width: 10px;
+     height: 10px;
+     background-color: green;
+     color: #009fd0;
+     border-radius: 50%;
+     margin: 0 .5rem;
+ }
+
+ .waite {
+     background-color: #f87047;
+ }
+
+ .danger {
+     color: #FF987A;
+     font-weight: bolder;
+ }
+
+ .jmad {
+
+     background-color: #e6db05;
+     font-weight: bolder;
+ }
+
+ .span_item {
+     display: flex;
+     align-items: center;
+ }
+
+ /* massge page style */
+ .massge_page {
+     width: 100%;
+     background-color: #fff;
+     border-radius: 5px;
+     display: flex;
+     padding: 2rem;
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+ }
+
+ .form_massges {
+     display: flex;
+     width: 100%;
+     justify-content: start;
+     flex-direction: column;
+ }
+
+ .RadioGroups {
+     display: flex;
+ }
+
+ .css-13lvt8g-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+     color: #f8ae00 !important;
+ }
+
+ .css-1mac7pt-MuiFormGroup-root {
+     flex-direction: unset !important;
+ }
+
+ /* style create promo code */
+ .createform_data {
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+ }
+
+ .createform_promo {
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+     padding: 1rem;
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+
+ }
+
+ .level_create {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     text-align: center;
+
+ }
+
+ .name_create {
+     width: 150px;
+ }
+
+ .name_massges {
+     margin: 1rem 0;
+ }
+
+ .hr {
+     border-left: 3px solid #f8ae00;
+     min-height: 250px;
+     margin: 0 2rem;
+
+ }
+
+ .flex_block {
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+ }
+
+
+ .createPromo {
+     background: #f8ae00;
+     padding: .7rem;
+     border: 2px solid #f8ae00;
+     width: 50%;
+     margin: 2rem auto;
+ }
+
+ @media (max-width: 600px) {
+
+     .create_promoPAge,
+     .level_flex,
+     .createform_data {
+         flex-direction: column;
+     }
+
+     .craete_modepromo {
+         margin-top: 1rem;
+     }
+
+     .header__search {
+         width: 90%;
+         margin: .8rem auto;
+     }
+
+     .hr {
+         display: none;
+     }
+
+     .flex_input {
+         display: flex;
+         flex-direction: column;
+     }
  }

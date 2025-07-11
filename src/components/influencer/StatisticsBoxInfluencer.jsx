@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
-import "../style.css";
+import "../admin/Dashboard/style.css";
 import { Badge, Col } from "react-bootstrap";
-import adduser from "../../../../assets/images/info.png";
-import efood from "../../../../assets/images/info.png";
-import greemFood from "../../../../assets/images/info.png";
-import redFood from "../../../../assets/images/info.png";
-import { themeContext } from "../../../../context/themeContext";
+import adduser from "../../assets/images/info.png";
+import efood from "../../assets/images/info.png";
+import greemFood from "../../assets/images/info.png";
+import redFood from "../../assets/images/info.png";
 import { Link } from "react-router-dom";
-import ChartElemnt from "./ChartElemnt";
 import MailIcon from "@mui/icons-material/Mail";
+import CardDeatils from "./CardDeatils";
+import { themeContext } from "../../context/themeContext";
 
 var Shows = [
   {
@@ -30,17 +30,17 @@ var Shows = [
     time: "عرض جميع المؤثرين",
     role: "6",
     number: "**",
-    route: "/admin/influencer",
+    route: "/admin/info",
   },
   {
     image: redFood,
-    time: "عرض جميع المؤثرين",
+    time: "هاد العنصر للاحتياط لو بدي اضيف",
     role: "7",
     number: "**",
-    route: "/admin/influencer",
+    route: "/admin/promo",
   },
 ];
-function StatisticsBox() {
+function StatisticsBoxInfluencer() {
   const getBadgeColor = (role) => {
     switch (role) {
       case "1":
@@ -70,7 +70,7 @@ function StatisticsBox() {
       >
         <Col>
           <div className="box__index">
-            <p className="box__index__P">تفاصيل سريعة</p>
+            <p className="box__index__P">تفاصيل الكود</p>
             {Shows.map((show) => (
               <div className="cell__index">
                 <div
@@ -102,10 +102,11 @@ function StatisticsBox() {
       </div>
       <div className="StatisticsBox1">
         إحصائيات سريعة
-        <ChartElemnt />
+        <CardDeatils />
       </div>
+   
     </div>
   );
 }
 
-export default StatisticsBox;
+export default StatisticsBoxInfluencer;
